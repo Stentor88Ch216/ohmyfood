@@ -1,0 +1,110 @@
+@import "colors";
+@import "global";
+
+
+header {
+    i {
+        position: absolute;
+        left: 34px;
+    }
+}
+
+h1 {
+    font-family: "Shrikhand";
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+
+section.choix {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 634px;
+}
+
+.titre {
+    .ligne {
+        width: 40px;
+        height: 3px;
+        background-color: $green;
+    }
+}
+
+img.restaurant {
+    height: 231px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carte {
+    background-color: $grey3;
+    width: 100%;
+    max-width: 1055px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    padding: 40px 17px 40px 17px;
+    gap: 40px;
+    border-radius: 40px, 40px, 0px, 0px;
+}
+
+#title-heart {
+    width: 100%;
+    max-width: 634px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.plat {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: stretch;
+
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding: 15px;
+        p {
+            font-weight: 300;
+        }
+    }
+
+    .prix {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        p {
+            font-weight: 700;
+        }
+    }
+
+    .like {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $green;
+        color: white;
+        padding: 15px;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    #title-heart {
+        width: auto;
+    }
+}
