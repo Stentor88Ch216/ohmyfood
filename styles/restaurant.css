@@ -94,9 +94,10 @@ footer a:hover p {
     margin-bottom: 0px;
   }
 }
-header i {
+header #back {
   position: absolute;
   left: 34px;
+  color: black;
 }
 
 h1 {
@@ -128,7 +129,6 @@ img.restaurant {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
 }
 
 .carte {
@@ -141,7 +141,8 @@ img.restaurant {
   justify-content: stretch;
   padding: 40px 17px 40px 17px;
   gap: 40px;
-  border-radius: 40px, 40px, 0px, 0px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
 }
 
 #title-heart {
@@ -169,21 +170,31 @@ img.restaurant {
 .plat .main-content p {
   font-weight: 300;
 }
-.plat .prix {
+.plat .main-content .prix {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.plat .prix p {
+.plat .main-content .prix p {
   font-weight: 700;
 }
+.plat .main-content:hover {
+  cursor: pointer;
+}
+.plat .main-content:hover + .like {
+  width: 50px;
+}
 .plat .like {
+  width: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #99E2D0;
   color: white;
-  padding: 15px;
+  transition: width 0.2s ease-out;
+}
+.plat .like i {
+  margin-left: 15px;
 }
 
 @media (min-width: 1024px) {

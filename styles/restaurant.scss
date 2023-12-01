@@ -1,13 +1,14 @@
 @import "colors";
 @import "global";
 
-
 header {
-    i {
+    #back {
         position: absolute;
         left: 34px;
+        color: black
     }
 }
+
 
 h1 {
     font-family: "Shrikhand";
@@ -40,7 +41,6 @@ img.restaurant {
     height: 231px;
     width: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .carte {
@@ -53,7 +53,8 @@ img.restaurant {
     justify-content: stretch;
     padding: 40px 17px 40px 17px;
     gap: 40px;
-    border-radius: 40px, 40px, 0px, 0px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
 }
 
 #title-heart {
@@ -80,24 +81,40 @@ img.restaurant {
         p {
             font-weight: 300;
         }
-    }
 
-    .prix {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        p {
-            font-weight: 700;
+        .prix {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            p {
+                font-weight: 700;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover + .like {
+            width: 50px;
         }
     }
 
+    
+
     .like {
+        width: 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         background-color: $green;
         color: white;
-        padding: 15px;
+
+        i {
+            margin-left: 15px;
+        }
+
+        transition: width 0.2s ease-out;
     }
 }
 
