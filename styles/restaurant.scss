@@ -79,7 +79,6 @@ img.restaurant {
 
     &:hover {
         cursor: pointer;
-
         .like {
             width: 50px;
         }
@@ -111,10 +110,11 @@ img.restaurant {
         justify-content: center;
         background-color: $green;
         color: white;
+        transition: width 0.2s ease-out;
+        
         i {
             margin-left: 15px;
         }
-        transition: width 0.2s ease-out;
     }
 }
 
