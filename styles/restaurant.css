@@ -150,7 +150,11 @@ img.restaurant {
   max-width: 634px;
   display: flex;
   justify-content: space-between;
-  gap: 24px;
+  /*gap: 24px;*/
+}
+#title-heart .heart {
+  width: 24px;
+  height: 24px;
 }
 
 .plat {
@@ -160,6 +164,12 @@ img.restaurant {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: stretch;
+}
+.plat:hover {
+  cursor: pointer;
+}
+.plat:hover .like {
+  width: 50px;
 }
 .plat .main-content {
   display: flex;
@@ -177,12 +187,6 @@ img.restaurant {
 }
 .plat .main-content .prix p {
   font-weight: 700;
-}
-.plat .main-content:hover {
-  cursor: pointer;
-}
-.plat .main-content:hover + .like {
-  width: 50px;
 }
 .plat .like {
   width: 0px;
