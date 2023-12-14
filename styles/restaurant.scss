@@ -62,10 +62,49 @@ img.restaurant {
     max-width: 634px;
     display: flex;
     justify-content: space-between;
-    /*gap: 24px;*/
-    .heart {
-        width: 24px;
-        height: 24px;
+    align-items: center;
+}
+
+.heart {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    .heartEmpty {
+        height: 25px;
+        width:  25px;
+    }
+
+    .heartFill {
+        height: 25px;
+        width:  25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: center;
+        transform: scale(0);
+    }
+}
+
+@keyframes heartBounce {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.heart:hover {
+    cursor: pointer;
+    .heartFill {
+        animation: heartBounce 0.5s ease-in-out;
+        animation-fill-mode: forwards;
     }
 }
 
@@ -111,7 +150,7 @@ img.restaurant {
         background-color: $green;
         color: white;
         transition: width 0.2s ease-out;
-        
+
         i {
             margin-left: 15px;
         }
