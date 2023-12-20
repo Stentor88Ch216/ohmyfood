@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -47,6 +48,7 @@ h3 {
   font-weight: 500;
 }
 
+/* Faie pareil que `choix`? */
 button {
   border: none;
   border-radius: 100px;
@@ -119,65 +121,60 @@ footer a:hover p {
     margin-bottom: 0px;
   }
 }
-header #back {
-  position: absolute;
-  left: 34px;
-  color: black;
+/* CASCADE APPARITION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.plat {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
-h1 {
-  font-family: "Shrikhand";
-  font-weight: normal;
-  white-space: nowrap;
+.plat1 {
+  animation-delay: 0.1s;
 }
 
-h2 {
-  text-transform: uppercase;
+.plat2 {
+  animation-delay: 0.2s;
 }
 
-section.choix {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 634px;
+.plat3 {
+  animation-delay: 0.3s;
 }
 
-.titre .ligne {
-  width: 40px;
-  height: 3px;
-  background-color: #99E2D0;
+.plat4 {
+  animation-delay: 0.4s;
 }
 
-img.restaurant {
-  height: 231px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.plat5 {
+  animation-delay: 0.5s;
 }
 
-.carte {
-  background-color: #F6F6F6;
-  width: 100%;
-  max-width: 1055px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: stretch;
-  padding: 40px 17px 40px 17px;
-  gap: 40px;
-  border-radius: 40px 40px 0 0;
-  margin-top: -40px;
+.plat6 {
+  animation-delay: 0.6s;
 }
 
-#title-heart {
-  width: 100%;
-  max-width: 634px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.plat7 {
+  animation-delay: 0.7s;
 }
 
+.plat8 {
+  animation-delay: 0.8s;
+}
+
+.plat9 {
+  animation-delay: 0.9s;
+}
+
+/* HEART ANIMATION */
 .heart {
   position: relative;
   top: 0;
@@ -187,7 +184,8 @@ img.restaurant {
   height: 25px;
   width: 25px;
 }
-.heart .heartFill {
+
+.heartFill {
   height: 25px;
   width: 25px;
   position: absolute;
@@ -218,7 +216,97 @@ img.restaurant {
   animation-fill-mode: forwards;
 }
 
+/* LOADER */
+#loader {
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background-color: #9356DC;
+  box-shadow: 0px 2px 10px 0px #9356DC;
+  animation-name: loading;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+    opacity: 100%;
+  }
+  50% {
+    width: 100%;
+    opacity: 100%;
+  }
+  100% {
+    width: 100%;
+    opacity: 0%;
+  }
+}
+header #back {
+  position: absolute;
+  left: 34px;
+  color: black;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+section.choix {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  /* Mettre un pourcentage */
+  max-width: 634px;
+  /* Margin auto */
+}
+
+.titre .ligne {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+
+img.restaurant {
+  height: 231px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carte {
+  background-color: #F6F6F6;
+  width: 100%;
+  max-width: 1055px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Inutile ?*/
+  justify-content: stretch;
+  padding: 40px 17px 40px 17px;
+  gap: 40px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+}
+
+/* Faire pareil que pour les `choix`*/
+#title-heart {
+  width: 100%;
+  max-width: 634px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .plat {
+  /* Penser plutôt à margin auto ? (que pour left et right?)*/
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
@@ -265,5 +353,6 @@ img.restaurant {
 @media (min-width: 1024px) {
   #title-heart {
     width: auto;
+    gap: 10px;
   }
 }

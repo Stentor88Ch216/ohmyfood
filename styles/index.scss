@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'global';
+@import 'animations';
 
 $max-width: 1080px;
 
@@ -87,6 +88,8 @@ section#restaurants {
     align-items: center;
 
     #restaurants-content {
+        width: 100%;
+        max-width: $max-width;
         display: flex;
         flex-direction: column;
         gap: 27px;
@@ -94,7 +97,7 @@ section#restaurants {
     
 
     #cards {
-        max-width: $max-width;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 27px;

@@ -47,6 +47,7 @@ h3 {
   font-weight: 500;
 }
 
+/* Faie pareil que `choix`? */
 button {
   border: none;
   border-radius: 100px;
@@ -117,6 +118,127 @@ footer a:hover p {
   footer img#logo-footer {
     order: 999;
     margin-bottom: 0px;
+  }
+}
+/* CASCADE APPARITION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.plat {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.plat1 {
+  animation-delay: 0.1s;
+}
+
+.plat2 {
+  animation-delay: 0.2s;
+}
+
+.plat3 {
+  animation-delay: 0.3s;
+}
+
+.plat4 {
+  animation-delay: 0.4s;
+}
+
+.plat5 {
+  animation-delay: 0.5s;
+}
+
+.plat6 {
+  animation-delay: 0.6s;
+}
+
+.plat7 {
+  animation-delay: 0.7s;
+}
+
+.plat8 {
+  animation-delay: 0.8s;
+}
+
+.plat9 {
+  animation-delay: 0.9s;
+}
+
+/* HEART ANIMATION */
+.heart {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.heart .heartEmpty {
+  height: 25px;
+  width: 25px;
+}
+
+.heartFill {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center;
+  transform: scale(0);
+}
+
+@keyframes heartBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.heart:hover {
+  cursor: pointer;
+}
+.heart:hover .heartFill {
+  animation: heartBounce 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/* LOADER */
+#loader {
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background-color: #9356DC;
+  box-shadow: 0px 2px 10px 0px #9356DC;
+  animation-name: loading;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+    opacity: 100%;
+  }
+  50% {
+    width: 100%;
+    opacity: 100%;
+  }
+  100% {
+    width: 100%;
+    opacity: 0%;
   }
 }
 section#location {
@@ -193,12 +315,14 @@ section#restaurants {
   align-items: center;
 }
 section#restaurants #restaurants-content {
+  width: 100%;
+  max-width: 1080px;
   display: flex;
   flex-direction: column;
   gap: 27px;
 }
 section#restaurants #cards {
-  max-width: 1080px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 27px;
