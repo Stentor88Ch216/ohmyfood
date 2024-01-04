@@ -21,13 +21,20 @@ h2 {
     text-transform: uppercase;
 }
 
+p {
+    text-wrap: nowrap;
+}
+
+/*.description {
+    overflow: hidden;
+}*/
 
 section.choix {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    /* Mettre un pourcentage */
+    /* Mettre un pourcentage ?*/
     max-width: 634px;
     /* Margin auto */
 }
@@ -87,28 +94,42 @@ img.restaurant {
             width: 50px;
         }
     }
+    
+    .description {
+        flex-shrink: 1;
+        min-width: 10px;
+        max-width: 100%;
+        margin: 10px;
 
-    .main-content {
-        display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
-        padding: 15px;
-        p {
-            font-weight: 300;
-        }
-
-        .prix {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            p {
-                font-weight: 700;
-            }
+        p, h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
 
+    .spacer {
+        flex-grow: 1;
+    }
+
+    p {
+        font-weight: 300;
+    }
+
+    .prix {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        p {
+            font-weight: 700;
+        }
+    }
+    
+
     .like {
         width: 0px;
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
