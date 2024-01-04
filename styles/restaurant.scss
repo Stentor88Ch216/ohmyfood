@@ -101,6 +101,7 @@ img.restaurant {
         padding: 15px;
 
         .description {
+            display:block;
             background-color: aqua;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -109,6 +110,12 @@ img.restaurant {
             flex-shrink: 1;
             min-width: 10px;
             max-width: 100%;
+
+            p, h3 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
         }
 
         .spacer {
@@ -135,6 +142,7 @@ img.restaurant {
 
     .like {
         width: 0px;
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;

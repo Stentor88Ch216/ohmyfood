@@ -339,6 +339,7 @@ img.restaurant {
   width: 50px;
 }
 .plat .description {
+  display: block;
   background-color: aqua;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -347,6 +348,11 @@ img.restaurant {
   flex-shrink: 1;
   min-width: 10px;
   max-width: 100%;
+}
+.plat .description p, .plat .description h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .plat .spacer {
   background-color: rgba(255, 0, 0, 0.496);
@@ -365,6 +371,7 @@ img.restaurant {
 }
 .plat .like {
   width: 0px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
