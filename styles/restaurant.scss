@@ -96,48 +96,36 @@ img.restaurant {
     }
 
 
-        display: flex;
-        justify-content: space-between;
-        padding: 15px;
+    .description {
+        flex-shrink: 1;
+        min-width: 10px;
+        max-width: 100%;
+        margin: 10px;
 
-        .description {
-            display:block;
-            background-color: aqua;
+        p, h3 {
             overflow: hidden;
             text-overflow: ellipsis;
-            text-wrap: nowrap;
             white-space: nowrap;
-            flex-shrink: 1;
-            min-width: 10px;
-            max-width: 100%;
-
-            p, h3 {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
         }
+    }
 
-        .spacer {
-            background-color: rgba(255, 0, 0, 0.496);
-            flex-grow: 1;
-        }
+    .spacer {
+        flex-grow: 1;
+    }
 
+    p {
+        font-weight: 300;
+    }
 
-
-
+    .prix {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         p {
-            font-weight: 300;
+            font-weight: 700;
         }
-
-        .prix {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            p {
-                font-weight: 700;
-            }
-        }
+    }
     
 
     .like {
